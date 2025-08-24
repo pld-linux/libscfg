@@ -3,6 +3,7 @@
 %bcond_without	static_libs	# static library
 
 Summary:	A C library for scfg
+Summary(pl.UTF-8):	Biblioteka C do scfg
 Name:		libscfg
 Version:	0.1.1
 Release:	1
@@ -20,21 +21,32 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 A C library for scfg (simple configuration file format).
 
+%description -l pl.UTF-8
+Biblioteka do scfg (prostego formatu plików konfiguracyjnych).
+
 %package devel
 Summary:	Header files for libscfg library
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libscfg
 Group:		Development/Libraries
 Requires:	%{name}%{?_isa} = %{version}-%{release}
 
 %description devel
 Header files for libscfg library.
 
+%description devel -l pl.UTF-8
+Pliki nagłówkowe biblioteki libscfg.
+
 %package static
 Summary:	Static libscfg library
+Summary(pl.UTF-8):	Biblioteka statyczna libscfg
 Group:		Development/Libraries
 Requires:	%{name}-devel%{?_isa} = %{version}-%{release}
 
 %description static
 Static libscfg library.
+
+%description static -l pl.UTF-8
+Biblioteka statyczna libscfg.
 
 %prep
 %setup -q -n %{name}-v%{version}
@@ -57,7 +69,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
-
 
 %files
 %defattr(644,root,root,755)
