@@ -14,7 +14,7 @@ Patch0:		lib-version.patch
 URL:		https://wayland.emersion.fr/libscfg/
 BuildRequires:	meson >= 0.54.0
 BuildRequires:	ninja
-BuildRequires:	rpmbuild(macros) >= 1.736
+BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
